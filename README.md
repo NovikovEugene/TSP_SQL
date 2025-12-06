@@ -13,4 +13,5 @@ Example of the output data:
 | ------ | ------ |
 | 80 | {a,b,d,c,a} |
 | ... | ... |  
+
 Sort the data by total_cost and then by tour.  
