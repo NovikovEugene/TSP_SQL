@@ -21,6 +21,16 @@ WITH RECURSIVE tours AS (
     WHERE NOT n.point1 = ANY(t.tour)
 )
 
-SELECT total_cost, tour
+SELECT
+    total_cost,
+    tour || point2 AS tour
 FROM tours
-WHERE array_length(tour, 1) = 4
+WHERE point2 = 'a'
+  AND array_length(tour, 1) = 4
+  AND total_cost = (
+    SELECT MIN(total_cost)
+    FROM tours
+    WHERE point2 = 'a'
+    AND array_length(tour, 1) = 4
+  )
+ORDER BY total_cost, tour;
