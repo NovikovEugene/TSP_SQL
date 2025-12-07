@@ -11,7 +11,7 @@ Write a SQL statement that returns all tours with minimum travel cost if we star
 Example of the output data:  
 | total_cost | tour |
 | ------ | ------ |
-| 80 | {a,b,d,c,a} |
+| 48 | {a,b,d,c,a} |
 | ... | ... |  
 
 Sort the data by total_cost and then by tour.  
